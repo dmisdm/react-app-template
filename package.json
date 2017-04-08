@@ -3,6 +3,17 @@
     "postinstall": "lerna bootstrap"
   },
   "devDependencies": {
+    "@types/material-ui": "^0.16.60",
+    "@types/node": "^7.0.12",
+    "@types/react": "^15.0.21",
+    "@types/react-dom": "^0.14.23",
+    "@types/react-redux": "^4.4.38",
+    "@types/react-router": "^4.0.4",
+    "@types/react-router-redux": "^5.0.0",
+    "@types/recompose": "^0.22.0",
     "lerna": "2.0.0-beta.38"
+  },
+  "dependencies": {
+    "react-router-redux": "^4.0.8"
   }
 }
