@@ -21,7 +21,7 @@ export const Root = (props: any) => (
   <Providers>
     <ConnectedRouter history={history}>
       <div style={styles.root} {...props}>
-        <Helmet titleTemplate="Airboard | %s">
+        <Helmet titleTemplate="React App Template | %s">
           <link rel="shortcut icon" href={favicon} />
         </Helmet>
         {props.children}
