@@ -1,0 +1,37 @@
+{
+  "name": "react-app-template",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "color": "^1.0.3",
+    "material-ui": "^0.17.1",
+    "moment": "^2.18.1",
+    "ramda": "^0.23.0",
+    "react": "^15.5.3",
+    "react-dom": "^15.5.3",
+    "react-helmet": "^5.0.2",
+    "react-redux": "^5.0.3",
+    "react-tap-event-plugin": "^2.0.1",
+    "recompose": "^0.22.0",
+    "redux": "^3.6.0",
+    "redux-form": "^6.6.2",
+    "redux-observable": "^0.14.1",
+    "reselect": "^3.0.0",
+    "rxjs": "^5.3.0"
+  },
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.1.2",
+    "offline-plugin": "^4.6.2",
+    "react-app-rewired": "^0.6.5",
+    "react-scripts": "0.9.5",
+    "tslib": "^1.6.0",
+    "typescript": "^2.2.2",
+    "webpack-dashboard": "^0.3.0"
+  },
+  "scripts": {
+    "start": "webpack-dashboard -- react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
