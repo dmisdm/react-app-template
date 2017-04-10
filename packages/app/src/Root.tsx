@@ -1,22 +1,22 @@
 //@flow
-import React from "react";
+import * as React from "react";
 import { Helmet } from "react-helmet";
 import { ConnectedRouter } from "react-router-redux";
 import history from "./_shared/history";
-import injectTapEventPlugin from "react-tap-event-plugin";
+const injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 import { setObservableConfig } from "recompose";
 import rxjsconfig from "recompose/rxjsObservableConfig";
 const favicon = require("../public/favicon.ico");
 setObservableConfig(rxjsconfig);
 import { Providers } from "./Providers";
+import { App } from "./App";
 const styles = {
   root: {
     height: "100%",
     width: "100%"
   }
 };
-
 export const Root = (props: any) => (
   <Providers>
     <ConnectedRouter history={history}>
@@ -24,7 +24,7 @@ export const Root = (props: any) => (
         <Helmet titleTemplate="React App Template | %s">
           <link rel="shortcut icon" href={favicon} />
         </Helmet>
-        {props.children}
+        <App />
       </div>
     </ConnectedRouter>
   </Providers>
