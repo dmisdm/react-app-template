@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-const { Root } = require("./Root");
+import { Root } from "./Root";
 import "./index.css";
 
 ReactDOM.render(<Root />, document.getElementById("root"));

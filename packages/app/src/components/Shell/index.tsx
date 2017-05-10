@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { compose, prependChild } from "_shared/compositionUtils";
+import { prependChild } from "_shared/compositionUtils";
 import { SnackbarController } from "components/Shell/SnackbarController";
+import { compose } from "recompose";
 export const Shell = compose(
     prependChild(<SnackbarController />)
 )

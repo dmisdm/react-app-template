@@ -11,20 +11,24 @@ const favicon = require("../public/favicon.ico");
 setObservableConfig(rxjsconfig);
 import { Providers } from "./Providers";
 import { App } from "./App";
+
 const styles = {
   root: {
     height: "100%",
     width: "100%"
+  },
+  app: {
+    height: '100%'
   }
 };
 export const Root = (props: any) => (
   <Providers>
     <ConnectedRouter history={history}>
       <div style={styles.root} {...props}>
-        <Helmet titleTemplate="React App Template | %s">
+        <Helmet titleTemplate="Who's doing standup ? | %s">
           <link rel="shortcut icon" href={favicon} />
         </Helmet>
-        <App />
+        <App style={styles.app} />
       </div>
     </ConnectedRouter>
   </Providers>

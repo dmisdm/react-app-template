@@ -1,5 +1,5 @@
-import { compose } from "_shared/compositionUtils";
-import { defaultProps } from "recompose";
+
+import { defaultProps, compose } from "recompose";
 import { Snackbar } from "material-ui";
 import { connect } from "react-redux";
 
