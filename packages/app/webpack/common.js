@@ -1,21 +1,24 @@
 const path = require("path");
 const CircularDependencyPlugin = require("circular-dependency-plugin");
-module.exports = config => {
-  config.module.loaders[0].exclude.push(/\.(ts|tsx)$/);
-
-  config.module.loaders = [
-    ...config.module.loaders,
+const { TsConfigPathsPlugin } = require("awesome-typescript-loader");
+//const Config = require("webpack-chain");
+module.exports = _config => {
+  _config.module.rules[1].exclude.push(/.(ts|tsx)$/);
+  _config.module.rules = _config.module.rules.concat([
     {
       test: /.(ts|tsx)$/,
-      loaders: ["awesome-typescript"],
-      exclude: /node_modules/
+      exclude: [/node_modules/],
+      loader: "awesome-typescript-loader"
     }
-  ];
+  ]);
 
-  config.resolve.extensions = [".ts", ".tsx", ...config.resolve.extensions];
-  config.resolve.root = [path.resolve("../src")];
-
-  config.plugins.push(new CircularDependencyPlugin());
-
-  return config;
+  _config.plugins.push(
+    new CircularDependencyPlugin(),
+    new TsConfigPathsPlugin()
+  );
+  _config.resolve.extensions = _config.resolve.extensions.concat([
+    ".ts",
+    ".tsx"
+  ]);
+  return _config;
 };

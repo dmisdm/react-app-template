@@ -28,20 +28,22 @@
     "rxjs": "^5.4.0"
   },
   "devDependencies": {
+    "@types/webpack-chain": "^3.0.1",
     "awesome-typescript-loader": "^3.1.3",
     "babel-core": "^6.24.1",
     "circular-dependency-plugin": "^3.0.0",
     "offline-plugin": "^4.7.0",
-    "react-app-rewired": "^0.6.5",
-    "react-scripts": "0.9.5",
+    "react-app-rewired": "^1.0.1",
+    "react-scripts": "^1.0.2",
     "tslib": "^1.7.0",
     "typescript": "2.2.2",
+    "webpack-chain": "^3.3.0",
     "webpack-dashboard": "^0.4.0"
   },
   "scripts": {
-    "start": "webpack-dashboard -- react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom",
+    "start": "NODE_ENV=development webpack-dashboard -- react-app-rewired start",
+    "build": "NODE_ENV=production react-app-rewired build",
+    "test": "NODE_ENV=development react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject"
   }
 }

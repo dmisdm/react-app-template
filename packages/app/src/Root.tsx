@@ -7,10 +7,11 @@ const injectTapEventPlugin = require("react-tap-event-plugin");
 injectTapEventPlugin();
 import { setObservableConfig } from "recompose";
 import rxjsconfig from "recompose/rxjsObservableConfig";
-const favicon = require("../public/favicon.ico");
+const favicon = require("./assets/favicon.ico");
 setObservableConfig(rxjsconfig);
 import { Providers } from "./Providers";
 import { App } from "./App";
+
 
 const styles = {
   root: {
@@ -21,6 +22,7 @@ const styles = {
     height: '100%'
   }
 };
+
 export const Root = (props: any) => (
   <Providers>
     <ConnectedRouter history={history}>

@@ -1,5 +1,5 @@
 import { GlamorousInterface } from 'glamorous';
-const glamorous = require('glamorous') as GlamorousInterface;
+import glamorous from 'glamorous';
 export const styles = {
     Flex: {
         display: 'flex',
